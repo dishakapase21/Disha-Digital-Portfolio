@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Disha Kapse - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(135deg, #a3d5ff, #004e92);
+      color: #000;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    nav {
+      background-color: #004e92;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #a3d5ff;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem;
+      animation: popIn 1s ease-in-out;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #000;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+    }
+
+    header p {
+      font-size: 1rem;
+    }
+
+    section {
+      margin: 1.5rem;
+      background: rgba(255, 255, 255, 0.5);
+      padding: 1.2rem;
+      border-radius: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: #004e92;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #004e92;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li::before {
+      content: "\2022";
+      color: #004e92;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+    }
+
+    .contact a {
+      color: #004e92;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .social-links {
+      text-align: center;
+      margin: 2rem 0;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .social-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      margin: 0 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #004e92;
+      border-radius: 30px;
+      transition: background-color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background-color: #003366;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: #004e92;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      header p {
+        font-size: 0.9rem;
+      }
+
+      section {
+        margin: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h2 style="color:white; font-weight: 600;">Disha Kapse</h2>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#career">Objective</a>
+      <a href="#personal">Personal</a>
+      <a href="#contact">Contact</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#hobbies">Hobbies</a>
+    </div>
+  </nav>
+
+  <header>
+    <img src="C:\Users\HP\Downloads\disha.jpg" alt="Disha Photo"/>
+    <h1>Disha Kapse</h1>
+    <p>B.Tech. - Civil Engineering | MIT AOE, Pune</p>
+  </header>
+
+  <section id="career">
+    <h2>Career Objective</h2>
+    <p>Motivated first-year engineering student eager to explore the world of civil. Passionate about learning emerging technologies and contributing to innovative projects.</p>
+  </section>
+
+  <section id="personal">
+    <h2>Personal Details</h2>
+    <ul>
+      <li>Date of Birth: 1 august, 2006</li>
+      <li>Gender: Female</li>
+      <li>Marital Status: Single</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <ul>
+      <li>Phone: <a href="tel:+917219473562">+91-9529150847</a></li>
+      <li>Email: <a href="mailto:shreyabedre1507@gmail.com">202401030013@mitaoe.ac.in.com</a></li>
+      <li>Address: Kantidaan society,Dehu Phata, Alandi Maharashtra, 412105</li>
+    </ul>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>B.Tech. Civil Engineering, MIT AOE, Pune (2024 - 2028)</li>
+      <li>12th MSBSHSE, Army Public School,Ahmednagar 83%</li>
+      <li>10th MSBSHSE, Army Public School,Merut 73%</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>AutoCAD, Fusion 360, Python, C, AIML</p>
+  </section>
+
+  <section>
+    <h2>Courses / Subjects of Interest</h2>
+    <p>Engineering Graphics, AI & ML, Thermodynamics, Design Thinking, Data Structures</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p><strong>Fire Protecting System (FPS)</strong> — Designed a fire safety system for vehicles using mist sprinklers and alarms to aid evacuation in emergencies.</p>
+  </section>
+
+  <section>
+    <h2>Soft Skills</h2>
+    <p>Teamwork, Communication, Leadership, Critical Thinking, Time Management</p>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>NASCOM - DIGITAL 101</li>
+      <li>CISCO - Python 1 & 2</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Roles & Responsibility</h2>
+    <p>Management Group Member - INVICTUS</p>
+  </section>
+
+  <section>
+    <h2>Languages</h2>
+    <p>English, Hindi, Marathi, German</p>
+  </section>
+
+  <section id="hobbies">
+    <h2>Hobbies & Interests</h2>
+    <p>Cooking, Public Speaking, Dancing, Drawing</p>
+  </section>
+
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/disha-kapase-1401b3337?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navLinks');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
